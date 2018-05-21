@@ -18,7 +18,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.40.3 with theme Tranquilpeak 0.4.3-BETA">
-    <title>About</title>
+    <title>NQueen</title>
     <meta name="author" content="">
     <meta name="keywords" content="">
 
@@ -26,15 +26,60 @@
     
 
     
-    <meta name="description" content="test for the hugo HUGO 經過一晚的研究終於把 HUGO 大概給用好，原本以前就有打算寫 Blog 的念頭，結果因為太懶惰，都沒有去寫，這次剛好想說透過Blog 來記錄自己的學習成長，希望自己能持續下去 ， 希望之後部會再有熬夜研究事情，一想到今天課堂滿滿，晚上還有程式競賽，就覺得今天很絕望。">
-    <meta property="og:description" content="test for the hugo HUGO 經過一晚的研究終於把 HUGO 大概給用好，原本以前就有打算寫 Blog 的念頭，結果因為太懶惰，都沒有去寫，這次剛好想說透過Blog 來記錄自己的學習成長，希望自己能持續下去 ， 希望之後部會再有熬夜研究事情，一想到今天課堂滿滿，晚上還有程式競賽，就覺得今天很絕望。">
+    <meta name="description" content="八皇后 這是一題經典的回朔法的題目
+題目 皇后的攻擊範圍是米字型，然後給定你一個N*N的棋盤，請問各個皇后不乎相打起來的方法有幾種。這一題算是小變形，他還會給你各個棋盤位置的權重，要求所有皇后在的位置和的最大值跟最小值，沒有就輸出 -1
+範測 Input 2
+4
+1 7 4 0
+9 4 8 8
+2 4 5 5
+1 7 1 1
+3
+1 1 1
+1 1 1
+1 1 1
+Output 25 18
+-1 -1
+解法 用一個陣列 qn 紀錄現在皇后是在第幾行，然後開始用回朔法，遇到不合的條件時，就跳離迴圈，找尋下一個位置，找到可以的位置，就把它紀錄到qn裡，並遞迴下去，當找到 N 個位置時，就把之前累加的值與最小值跟最大值做比較，然後更新就可以了
+code #include &quot;bits/stdc&#43;&#43;.h&quot; using namespace std; long long w[20][20]; int q[20]; int n; long long max_num,min_num; int num=0; void qn(int cur,long long num){// (q[j],j) (i,cur) if(cur&lt;n){ for(int i=0; i&lt;n; i&#43;&#43;){ for(int j=0; j&lt;cur; j&#43;&#43;){ if(q[j]==i) break; // 判斷是否在同一行 if(((q[j]-i)==(cur-j))||((q[j]-i)==(j-cur))) break; //是否在對角線 if(j==cur-1){ //條件都符合 q[cur]=i; qn(cur&#43;1,num&#43;w[cur][i]); } } } }else{ if(num&gt;max_num) max_num=num; if(num&lt;min_num) min_num=num; } } int main(int argc, char const *argv[]) { int nCase; cin&gt;&gt;nCase; while (nCase--) { cin&gt;&gt;n; max_num=-1e9; min_num=1e9; for(int i=0; i&lt;n; i&#43;&#43;) for(int j=0; j&lt;n; j&#43;&#43;){ cin&gt;&gt;w[i][j]; } for(int i=0; i&lt;n; i&#43;&#43;){ q[0]=i; qn(1,w[0][i]); } cout&lt;&lt;(max_num!">
+    <meta property="og:description" content="八皇后 這是一題經典的回朔法的題目
+題目 皇后的攻擊範圍是米字型，然後給定你一個N*N的棋盤，請問各個皇后不乎相打起來的方法有幾種。這一題算是小變形，他還會給你各個棋盤位置的權重，要求所有皇后在的位置和的最大值跟最小值，沒有就輸出 -1
+範測 Input 2
+4
+1 7 4 0
+9 4 8 8
+2 4 5 5
+1 7 1 1
+3
+1 1 1
+1 1 1
+1 1 1
+Output 25 18
+-1 -1
+解法 用一個陣列 qn 紀錄現在皇后是在第幾行，然後開始用回朔法，遇到不合的條件時，就跳離迴圈，找尋下一個位置，找到可以的位置，就把它紀錄到qn裡，並遞迴下去，當找到 N 個位置時，就把之前累加的值與最小值跟最大值做比較，然後更新就可以了
+code #include &quot;bits/stdc&#43;&#43;.h&quot; using namespace std; long long w[20][20]; int q[20]; int n; long long max_num,min_num; int num=0; void qn(int cur,long long num){// (q[j],j) (i,cur) if(cur&lt;n){ for(int i=0; i&lt;n; i&#43;&#43;){ for(int j=0; j&lt;cur; j&#43;&#43;){ if(q[j]==i) break; // 判斷是否在同一行 if(((q[j]-i)==(cur-j))||((q[j]-i)==(j-cur))) break; //是否在對角線 if(j==cur-1){ //條件都符合 q[cur]=i; qn(cur&#43;1,num&#43;w[cur][i]); } } } }else{ if(num&gt;max_num) max_num=num; if(num&lt;min_num) min_num=num; } } int main(int argc, char const *argv[]) { int nCase; cin&gt;&gt;nCase; while (nCase--) { cin&gt;&gt;n; max_num=-1e9; min_num=1e9; for(int i=0; i&lt;n; i&#43;&#43;) for(int j=0; j&lt;n; j&#43;&#43;){ cin&gt;&gt;w[i][j]; } for(int i=0; i&lt;n; i&#43;&#43;){ q[0]=i; qn(1,w[0][i]); } cout&lt;&lt;(max_num!">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="About">
-    <meta property="og:url" content="/post/about/">
+    <meta property="og:title" content="NQueen">
+    <meta property="og:url" content="/post/nqueen/">
     <meta property="og:site_name" content="Coding Blog">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Coding Blog">
-    <meta name="twitter:description" content="test for the hugo HUGO 經過一晚的研究終於把 HUGO 大概給用好，原本以前就有打算寫 Blog 的念頭，結果因為太懶惰，都沒有去寫，這次剛好想說透過Blog 來記錄自己的學習成長，希望自己能持續下去 ， 希望之後部會再有熬夜研究事情，一想到今天課堂滿滿，晚上還有程式競賽，就覺得今天很絕望。">
+    <meta name="twitter:description" content="八皇后 這是一題經典的回朔法的題目
+題目 皇后的攻擊範圍是米字型，然後給定你一個N*N的棋盤，請問各個皇后不乎相打起來的方法有幾種。這一題算是小變形，他還會給你各個棋盤位置的權重，要求所有皇后在的位置和的最大值跟最小值，沒有就輸出 -1
+範測 Input 2
+4
+1 7 4 0
+9 4 8 8
+2 4 5 5
+1 7 1 1
+3
+1 1 1
+1 1 1
+1 1 1
+Output 25 18
+-1 -1
+解法 用一個陣列 qn 紀錄現在皇后是在第幾行，然後開始用回朔法，遇到不合的條件時，就跳離迴圈，找尋下一個位置，找到可以的位置，就把它紀錄到qn裡，並遞迴下去，當找到 N 個位置時，就把之前累加的值與最小值跟最大值做比較，然後更新就可以了
+code #include &quot;bits/stdc&#43;&#43;.h&quot; using namespace std; long long w[20][20]; int q[20]; int n; long long max_num,min_num; int num=0; void qn(int cur,long long num){// (q[j],j) (i,cur) if(cur&lt;n){ for(int i=0; i&lt;n; i&#43;&#43;){ for(int j=0; j&lt;cur; j&#43;&#43;){ if(q[j]==i) break; // 判斷是否在同一行 if(((q[j]-i)==(cur-j))||((q[j]-i)==(j-cur))) break; //是否在對角線 if(j==cur-1){ //條件都符合 q[cur]=i; qn(cur&#43;1,num&#43;w[cur][i]); } } } }else{ if(num&gt;max_num) max_num=num; if(num&lt;min_num) min_num=num; } } int main(int argc, char const *argv[]) { int nCase; cin&gt;&gt;nCase; while (nCase--) { cin&gt;&gt;n; max_num=-1e9; min_num=1e9; for(int i=0; i&lt;n; i&#43;&#43;) for(int j=0; j&lt;n; j&#43;&#43;){ cin&gt;&gt;w[i][j]; } for(int i=0; i&lt;n; i&#43;&#43;){ q[0]=i; qn(1,w[0][i]); } cout&lt;&lt;(max_num!">
     
     
 
@@ -63,6 +108,9 @@
       
     
     
+
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai.min.css">
 
     
   </head>
@@ -107,15 +155,15 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      About
+      NQueen
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-05-17T08:34:57&#43;08:00">
+      <time itemprop="datePublished" datetime="2018-05-21T14:15:52&#43;08:00">
         
-   17, 2018
+   21, 2018
 
       </time>
     
@@ -124,7 +172,7 @@
   
     <span></span>
     
-      <a class="category-link" href="/categories/%e9%9a%a8%e7%ad%86">隨筆</a>
+      <a class="category-link" href="/categories/assignment">assignment</a>
     
   
 
@@ -136,14 +184,87 @@
             <div class="main-content-wrap">
               
 
-<p>test for the hugo
-<br></p>
+<h1 id="八皇后">八皇后</h1>
 
-<h1 id="hugo">HUGO</h1>
+<p>這是一題經典的回朔法的題目</p>
 
-<p><img src="https://i.imgur.com/NYeTOUp.jpg" alt="" />
-<br>
-經過一晚的研究終於把 HUGO 大概給用好，原本以前就有打算寫 Blog 的念頭，結果因為太懶惰，都沒有去寫，這次剛好想說透過Blog 來記錄自己的學習成長，希望自己能持續下去 ， 希望之後部會再有熬夜研究事情，一想到今天課堂滿滿，晚上還有程式競賽，就覺得今天很絕望。</p>
+<h2 id="題目">題目</h2>
+
+<p>皇后的攻擊範圍是米字型，然後給定你一個N*N的棋盤，請問各個皇后不乎相打起來的方法有幾種。這一題算是小變形，他還會給你各個棋盤位置的權重，要求所有皇后在的位置和的最大值跟最小值，沒有就輸出 -1</p>
+
+<h2 id="範測">範測</h2>
+
+<h3 id="input">Input</h3>
+
+<p>2<br>
+4<br>
+1 7 4 0<br>
+9 4 8 8<br>
+2 4 5 5<br>
+1 7 1 1<br>
+3<br>
+1 1 1<br>
+1 1 1<br>
+1 1 1<br></p>
+
+<h3 id="output">Output</h3>
+
+<p>25 18<br>
+-1 -1<br></p>
+
+<h2 id="解法">解法</h2>
+
+<p>用一個陣列 qn 紀錄現在皇后是在第幾行，然後開始用回朔法，遇到不合的條件時，就跳離迴圈，找尋下一個位置，找到可以的位置，就把它紀錄到qn裡，並遞迴下去，當找到 N 個位置時，就把之前累加的值與最小值跟最大值做比較，然後更新就可以了</p>
+
+<h2 id="code">code</h2>
+
+<pre><code class="language-cpp">#include &quot;bits/stdc++.h&quot;
+using namespace std;
+long long w[20][20];
+int q[20];
+int n;
+long long max_num,min_num;
+int num=0;
+void qn(int cur,long long num){// (q[j],j) (i,cur)
+  if(cur&lt;n){
+    for(int i=0; i&lt;n; i++){
+      for(int j=0; j&lt;cur; j++){
+        if(q[j]==i) break; // 判斷是否在同一行
+        if(((q[j]-i)==(cur-j))||((q[j]-i)==(j-cur))) break; //是否在對角線
+        if(j==cur-1){ //條件都符合
+          q[cur]=i;
+          qn(cur+1,num+w[cur][i]);
+        }
+      }
+    }
+  }else{
+    if(num&gt;max_num) max_num=num;
+    if(num&lt;min_num) min_num=num;
+  }
+}
+int main(int argc, char const *argv[]) {
+  int nCase;
+  cin&gt;&gt;nCase;
+  while (nCase--) {
+    cin&gt;&gt;n;
+    max_num=-1e9;
+    min_num=1e9;
+    for(int i=0; i&lt;n; i++)
+      for(int j=0; j&lt;n; j++){
+        cin&gt;&gt;w[i][j];
+      }
+
+  for(int i=0; i&lt;n; i++){
+    q[0]=i;
+    qn(1,w[0][i]);
+  }
+  cout&lt;&lt;(max_num!=-1e9?max_num:-1);
+  cout&lt;&lt;&quot; &quot;&lt;&lt;(min_num!=1e9?min_num:-1);
+    if(nCase) puts(&quot;&quot;);
+  }
+  return 0;
+}
+</code></pre>
 
               
             </div>
@@ -156,7 +277,9 @@
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small"></span><br/>
                     
-  <a class="tag tag--primary tag--small" href="/tags/%E5%BF%83%E5%BE%97/">心得</a>
+  <a class="tag tag--primary tag--small" href="/tags/backtracking/">backtracking</a>
+
+  <a class="tag tag--primary tag--small" href="/tags/programe/">programe</a>
 
                   </div>
                 
@@ -169,7 +292,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="/post/test2/" data-tooltip="Test">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml"></span>
@@ -177,7 +300,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/post/test2/" data-tooltip="Test">
               
                   <span class="hide-xs hide-sm text-small icon-mr"></span>
                   <i class="fa fa-angle-right"></i>
@@ -217,6 +340,10 @@
     &copy; 2018 Coding Blog. 
   </span>
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  
 </footer>
 
       </div>
@@ -228,7 +355,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="/post/test2/" data-tooltip="Test">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml"></span>
@@ -236,7 +363,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/post/test2/" data-tooltip="Test">
               
                   <span class="hide-xs hide-sm text-small icon-mr"></span>
                   <i class="fa fa-angle-right"></i>

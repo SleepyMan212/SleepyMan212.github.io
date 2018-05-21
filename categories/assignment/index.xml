@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Coding Blog</title>
-    <link>http://example.org/</link>
-    <description>Recent content on Coding Blog</description>
+    <title>Assignment on Coding Blog</title>
+    <link>http://example.org/categories/assignment/</link>
+    <description>Recent content in Assignment on Coding Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
     <lastBuildDate>Mon, 21 May 2018 14:15:52 +0800</lastBuildDate>
     
-	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://example.org/categories/assignment/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -33,24 +33,6 @@ Output 25 18
 -1 -1
 解法 用一個陣列 qn 紀錄現在皇后是在第幾行，然後開始用回朔法，遇到不合的條件時，就跳離迴圈，找尋下一個位置，找到可以的位置，就把它紀錄到qn裡，並遞迴下去，當找到 N 個位置時，就把之前累加的值與最小值跟最大值做比較，然後更新就可以了
 code #include &amp;quot;bits/stdc++.h&amp;quot; using namespace std; long long w[20][20]; int q[20]; int n; long long max_num,min_num; int num=0; void qn(int cur,long long num){// (q[j],j) (i,cur) if(cur&amp;lt;n){ for(int i=0; i&amp;lt;n; i++){ for(int j=0; j&amp;lt;cur; j++){ if(q[j]==i) break; // 判斷是否在同一行 if(((q[j]-i)==(cur-j))||((q[j]-i)==(j-cur))) break; //是否在對角線 if(j==cur-1){ //條件都符合 q[cur]=i; qn(cur+1,num+w[cur][i]); } } } }else{ if(num&amp;gt;max_num) max_num=num; if(num&amp;lt;min_num) min_num=num; } } int main(int argc, char const *argv[]) { int nCase; cin&amp;gt;&amp;gt;nCase; while (nCase--) { cin&amp;gt;&amp;gt;n; max_num=-1e9; min_num=1e9; for(int i=0; i&amp;lt;n; i++) for(int j=0; j&amp;lt;n; j++){ cin&amp;gt;&amp;gt;w[i][j]; } for(int i=0; i&amp;lt;n; i++){ q[0]=i; qn(1,w[0][i]); } cout&amp;lt;&amp;lt;(max_num!</description>
-    </item>
-    
-    <item>
-      <title>Test</title>
-      <link>http://example.org/post/test2/</link>
-      <pubDate>Thu, 17 May 2018 08:59:09 +0800</pubDate>
-      
-      <guid>http://example.org/post/test2/</guid>
-      <description>測試 This is a test</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>http://example.org/post/about/</link>
-      <pubDate>Thu, 17 May 2018 08:34:57 +0800</pubDate>
-      
-      <guid>http://example.org/post/about/</guid>
-      <description>test for the hugo HUGO 經過一晚的研究終於把 HUGO 大概給用好，原本以前就有打算寫 Blog 的念頭，結果因為太懶惰，都沒有去寫，這次剛好想說透過Blog 來記錄自己的學習成長，希望自己能持續下去 ， 希望之後部會再有熬夜研究事情，一想到今天課堂滿滿，晚上還有程式競賽，就覺得今天很絕望。</description>
     </item>
     
   </channel>

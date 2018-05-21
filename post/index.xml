@@ -6,10 +6,34 @@
     <description>Recent content in Posts on Coding Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Thu, 17 May 2018 08:59:09 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 21 May 2018 14:15:52 +0800</lastBuildDate>
     
 	<atom:link href="http://example.org/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>NQueen</title>
+      <link>http://example.org/post/nqueen/</link>
+      <pubDate>Mon, 21 May 2018 14:15:52 +0800</pubDate>
+      
+      <guid>http://example.org/post/nqueen/</guid>
+      <description>八皇后 這是一題經典的回朔法的題目
+題目 皇后的攻擊範圍是米字型，然後給定你一個N*N的棋盤，請問各個皇后不乎相打起來的方法有幾種。這一題算是小變形，他還會給你各個棋盤位置的權重，要求所有皇后在的位置和的最大值跟最小值，沒有就輸出 -1
+範測 Input 2
+4
+1 7 4 0
+9 4 8 8
+2 4 5 5
+1 7 1 1
+3
+1 1 1
+1 1 1
+1 1 1
+Output 25 18
+-1 -1
+解法 用一個陣列 qn 紀錄現在皇后是在第幾行，然後開始用回朔法，遇到不合的條件時，就跳離迴圈，找尋下一個位置，找到可以的位置，就把它紀錄到qn裡，並遞迴下去，當找到 N 個位置時，就把之前累加的值與最小值跟最大值做比較，然後更新就可以了
+code #include &amp;quot;bits/stdc++.h&amp;quot; using namespace std; long long w[20][20]; int q[20]; int n; long long max_num,min_num; int num=0; void qn(int cur,long long num){// (q[j],j) (i,cur) if(cur&amp;lt;n){ for(int i=0; i&amp;lt;n; i++){ for(int j=0; j&amp;lt;cur; j++){ if(q[j]==i) break; // 判斷是否在同一行 if(((q[j]-i)==(cur-j))||((q[j]-i)==(j-cur))) break; //是否在對角線 if(j==cur-1){ //條件都符合 q[cur]=i; qn(cur+1,num+w[cur][i]); } } } }else{ if(num&amp;gt;max_num) max_num=num; if(num&amp;lt;min_num) min_num=num; } } int main(int argc, char const *argv[]) { int nCase; cin&amp;gt;&amp;gt;nCase; while (nCase--) { cin&amp;gt;&amp;gt;n; max_num=-1e9; min_num=1e9; for(int i=0; i&amp;lt;n; i++) for(int j=0; j&amp;lt;n; j++){ cin&amp;gt;&amp;gt;w[i][j]; } for(int i=0; i&amp;lt;n; i++){ q[0]=i; qn(1,w[0][i]); } cout&amp;lt;&amp;lt;(max_num!</description>
+    </item>
     
     <item>
       <title>Test</title>
