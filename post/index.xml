@@ -36,16 +36,7 @@ code #include &amp;quot;bits/stdc++.h&amp;quot; using namespace std; long long w
     </item>
     
     <item>
-      <title>Test</title>
-      <link>http://example.org/post/test2/</link>
-      <pubDate>Thu, 17 May 2018 08:59:09 +0800</pubDate>
-      
-      <guid>http://example.org/post/test2/</guid>
-      <description>測試 This is a test</description>
-    </item>
-    
-    <item>
-      <title>About</title>
+      <title>HUGO 架站心血</title>
       <link>http://example.org/post/about/</link>
       <pubDate>Thu, 17 May 2018 08:34:57 +0800</pubDate>
       
