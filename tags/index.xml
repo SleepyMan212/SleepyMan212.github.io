@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Coding Blog</title>
-    <link>http://example.org/tags/</link>
+    <link>https://sleepyman212.github.io/tags/</link>
     <description>Recent content in Tags on Coding Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
     <lastBuildDate>Mon, 21 May 2018 14:15:52 +0800</lastBuildDate>
     
-	<atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sleepyman212.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Backtracking</title>
-      <link>http://example.org/tags/backtracking/</link>
+      <link>https://sleepyman212.github.io/tags/backtracking/</link>
       <pubDate>Mon, 21 May 2018 14:15:52 +0800</pubDate>
       
-      <guid>http://example.org/tags/backtracking/</guid>
+      <guid>https://sleepyman212.github.io/tags/backtracking/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Programe</title>
-      <link>http://example.org/tags/programe/</link>
+      <link>https://sleepyman212.github.io/tags/programe/</link>
       <pubDate>Mon, 21 May 2018 14:15:52 +0800</pubDate>
       
-      <guid>http://example.org/tags/programe/</guid>
+      <guid>https://sleepyman212.github.io/tags/programe/</guid>
       <description></description>
     </item>
     
     <item>
       <title>心得</title>
-      <link>http://example.org/tags/%E5%BF%83%E5%BE%97/</link>
+      <link>https://sleepyman212.github.io/tags/%E5%BF%83%E5%BE%97/</link>
       <pubDate>Thu, 17 May 2018 08:34:57 +0800</pubDate>
       
-      <guid>http://example.org/tags/%E5%BF%83%E5%BE%97/</guid>
+      <guid>https://sleepyman212.github.io/tags/%E5%BF%83%E5%BE%97/</guid>
       <description></description>
     </item>
     

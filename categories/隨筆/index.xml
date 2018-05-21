@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>隨筆 on Coding Blog</title>
-    <link>http://example.org/categories/%E9%9A%A8%E7%AD%86/</link>
+    <link>https://sleepyman212.github.io/categories/%E9%9A%A8%E7%AD%86/</link>
     <description>Recent content in 隨筆 on Coding Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
     <lastBuildDate>Thu, 17 May 2018 08:34:57 +0800</lastBuildDate>
     
-	<atom:link href="http://example.org/categories/%E9%9A%A8%E7%AD%86/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sleepyman212.github.io/categories/%E9%9A%A8%E7%AD%86/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>HUGO 架站心血</title>
-      <link>http://example.org/post/about/</link>
+      <link>https://sleepyman212.github.io/post/about/</link>
       <pubDate>Thu, 17 May 2018 08:34:57 +0800</pubDate>
       
-      <guid>http://example.org/post/about/</guid>
+      <guid>https://sleepyman212.github.io/post/about/</guid>
       <description>test for the hugo HUGO 經過一晚的研究終於把 HUGO 大概給用好，原本以前就有打算寫 Blog 的念頭，結果因為太懶惰，都沒有去寫，這次剛好想說透過Blog 來記錄自己的學習成長，希望自己能持續下去 ， 希望之後部會再有熬夜研究事情，一想到今天課堂滿滿，晚上還有程式競賽，就覺得今天很絕望。</description>
     </item>
     

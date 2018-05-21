@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Assignment on Coding Blog</title>
-    <link>http://example.org/categories/assignment/</link>
+    <link>https://sleepyman212.github.io/categories/assignment/</link>
     <description>Recent content in Assignment on Coding Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
     <lastBuildDate>Mon, 21 May 2018 14:15:52 +0800</lastBuildDate>
     
-	<atom:link href="http://example.org/categories/assignment/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sleepyman212.github.io/categories/assignment/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>NQueen</title>
-      <link>http://example.org/post/nqueen/</link>
+      <link>https://sleepyman212.github.io/post/nqueen/</link>
       <pubDate>Mon, 21 May 2018 14:15:52 +0800</pubDate>
       
-      <guid>http://example.org/post/nqueen/</guid>
+      <guid>https://sleepyman212.github.io/post/nqueen/</guid>
       <description>八皇后 這是一題經典的回朔法的題目
 題目 皇后的攻擊範圍是米字型，然後給定你一個N*N的棋盤，請問各個皇后不乎相打起來的方法有幾種。這一題算是小變形，他還會給你各個棋盤位置的權重，要求所有皇后在的位置和的最大值跟最小值，沒有就輸出 -1
 範測 Input 2
