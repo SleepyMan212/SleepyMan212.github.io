@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Itsa on Coding Blog</title>
+    <link>https://sleepyman212.github.io/tags/itsa/</link>
+    <description>Recent content in Itsa on Coding Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Wed, 23 May 2018 03:11:30 +0800</lastBuildDate>
+    
+	<atom:link href="https://sleepyman212.github.io/tags/itsa/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2018_ITSA</title>
+      <link>https://sleepyman212.github.io/post/2018_itsa/</link>
+      <pubDate>Wed, 23 May 2018 03:11:30 +0800</pubDate>
+      
+      <guid>https://sleepyman212.github.io/post/2018_itsa/</guid>
+      <description>原本是想說當天就要寫的，但是最近事情有點多，就拖到到現在了。這次ITSA算是第一次打規模比較大的程式比賽，想說放輕送打，在前一個小時順順利利解出了5題，結果最後兩小時卻沒有半題(哭哭)，有2,3 題是寫出來了，但是一直抓不道BUG，每個人瘋狂的在DEBUG，應該去廁所休息一下，說不定就會有靈感了，感覺我們這對穩定度還不夠，當我們一對題目需要DEBUG時，應該要挑幾題比較有把握的，一起把它解出來，希望明年可以解到八題。</description>
+    </item>
+    
+  </channel>
+</rss>
