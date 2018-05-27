@@ -6,10 +6,20 @@
     <description>Recent content on Coding Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Wed, 23 May 2018 03:11:30 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 28 May 2018 02:58:03 +0800</lastBuildDate>
     
 	<atom:link href="https://sleepyman212.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Thread練習</title>
+      <link>https://sleepyman212.github.io/post/thread%E7%B7%B4%E7%BF%92/</link>
+      <pubDate>Mon, 28 May 2018 02:58:03 +0800</pubDate>
+      
+      <guid>https://sleepyman212.github.io/post/thread%E7%B7%B4%E7%BF%92/</guid>
+      <description>JAVA Thread 今天看到Android綠豆湯裡在做，多執行緒的練習，想說很久沒有碰java了，所以就跟著他做了一下練習，就是模擬雪下下來的情形，當我們有一個class繼承了Thread，那麼我們override 他的 run 方法 ，就可以用 start 方法去呼叫了，然後他就會自動幫我們排程
+主程式 package thereadtest; import java.awt.Color; import java.awt.Graphics; import java.util.ArrayList; import javax.swing.JFrame; import javax.swing.JPanel; /** * * @author kwei */ public class ThereadTest extends JFrame{ SnowPanel canvas = new SnowPanel(); ThereadTest(){ setSize(850,650); setLocation(500, 300); add(canvas); setDefaultCloseOperation(DISPOSE_ON_CLOSE); setVisible(true); } public class SnowPanel extends JPanel{ // 把所有的雪(snow)加到這裡 ArrayList&amp;lt;Snow&amp;gt; snows = new ArrayList&amp;lt;&amp;gt;(); public SnowPanel() { setBackground(Color.black); // 新增所有的雪 for(int i=0; i&amp;lt;100; i++){ Snow snow = new Snow(this); //丟入執行緒 snow.</description>
+    </item>
     
     <item>
       <title>2018_ITSA</title>

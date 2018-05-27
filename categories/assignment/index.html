@@ -230,6 +230,24 @@ code #include &quot;bits/stdc++.h&quot; using namespace std; long long w[20][20]
           <div class="media">
             
             <div class="media-body">
+              <a class="link-unstyled" href="https://sleepyman212.github.io/post/thread%E7%B7%B4%E7%BF%92/">
+                <h3 class="media-heading">Thread練習</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  May 5, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">JAVA Thread 今天看到Android綠豆湯裡在做，多執行緒的練習，想說很久沒有碰java了，所以就跟著他做了一下練習，就是模擬雪下下來的情形，當我們有一個class繼承了Thread，那麼我們override 他的 run 方法 ，就可以用 start 方法去呼叫了，然後他就會自動幫我們排程
+主程式 package thereadtest; import java.awt.Color; import java.awt.Graphics; import java.util.ArrayList; import javax.swing.JFrame; import javax.swing.JPanel; /** * * @author kwei */ public class ThereadTest extends JFrame{ SnowPanel canvas = new SnowPanel(); ThereadTest(){ setSize(850,650); setLocation(500, 300); add(canvas); setDefaultCloseOperation(DISPOSE_ON_CLOSE); setVisible(true); } public class SnowPanel extends JPanel{ // 把所有的雪(snow)加到這裡 ArrayList&lt;Snow&gt; snows = new ArrayList&lt;&gt;(); public SnowPanel() { setBackground(Color.black); // 新增所有的雪 for(int i=0; i&lt;100; i++){ Snow snow = new Snow(this); //丟入執行緒 snow.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
               <a class="link-unstyled" href="https://sleepyman212.github.io/post/2018_itsa/">
                 <h3 class="media-heading">2018_ITSA</h3>
               </a>
@@ -300,7 +318,7 @@ code #include &quot;bits/stdc++.h&quot; using namespace std; long long w[20][20]
          data-message-zero=""
          data-message-one=""
          data-message-other="">
-         3 posts found
+         4 posts found
       </p>
     </div>
   </div>
