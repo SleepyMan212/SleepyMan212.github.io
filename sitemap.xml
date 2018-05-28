@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://sleepyman212.github.io/about/</loc>
+    <lastmod>2018-05-28T17:45:30+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://sleepyman212.github.io/post/thread%E7%B7%B4%E7%BF%92/</loc>
     <lastmod>2018-05-28T02:58:03+08:00</lastmod>
   </url>
@@ -42,7 +47,7 @@
   
   <url>
     <loc>https://sleepyman212.github.io/</loc>
-    <lastmod>2018-05-28T02:58:03+08:00</lastmod>
+    <lastmod>2018-05-28T17:45:30+08:00</lastmod>
     <priority>0</priority>
   </url>
   
