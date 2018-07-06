@@ -1,6 +1,8 @@
 
 
   
+    
+  
 
 
   
@@ -18,7 +20,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.40.3 with theme Tranquilpeak 0.4.3-BETA">
-    <title>About</title>
+    <title>C的變數儲存類別</title>
     <meta name="author" content="kwei">
     <meta name="keywords" content=", Hugo, theme">
 
@@ -26,15 +28,15 @@
     
 
     
-    <meta name="description" content="哈囉我是sleepyman，這是我一些作筆記的地方，歡迎參考或提出意見">
-    <meta property="og:description" content="哈囉我是sleepyman，這是我一些作筆記的地方，歡迎參考或提出意見">
+    <meta name="description" content="c 的變數儲存類別有以下四種 extern auto register static 常數 extern extern 可以用在變數或函式上，用來告訴編輯器該函數或變數已在其他檔案宣告過，不用在配置記憶體。 //file.c int a = 5; //file2.c">
+    <meta property="og:description" content="c 的變數儲存類別有以下四種 extern auto register static 常數 extern extern 可以用在變數或函式上，用來告訴編輯器該函數或變數已在其他檔案宣告過，不用在配置記憶體。 //file.c int a = 5; //file2.c">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="About">
-    <meta property="og:url" content="/about/">
+    <meta property="og:title" content="C的變數儲存類別">
+    <meta property="og:url" content="/post/c%E7%9A%84%E8%AE%8A%E6%95%B8%E5%84%B2%E5%AD%98%E9%A1%9E%E5%88%A5/">
     <meta property="og:site_name" content="Coding Blog">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Coding Blog">
-    <meta name="twitter:description" content="哈囉我是sleepyman，這是我一些作筆記的地方，歡迎參考或提出意見">
+    <meta name="twitter:description" content="c 的變數儲存類別有以下四種 extern auto register static 常數 extern extern 可以用在變數或函式上，用來告訴編輯器該函數或變數已在其他檔案宣告過，不用在配置記憶體。 //file.c int a = 5; //file2.c">
     
     
 
@@ -76,6 +78,9 @@ ga('send', 'pageview');
     
     
     
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow-night-eighties.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     
     
     <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -230,16 +235,16 @@ ga('send', 'pageview');
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      About
+      C的變數儲存類別
     </h1>
   
 
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-05-28T17:45:30&#43;08:00">
+      <time itemprop="datePublished" datetime="2018-07-07T00:28:54&#43;08:00">
         
-   28, 2018
+   7, 2018
 
       </time>
 
@@ -263,7 +268,166 @@ ga('send', 'pageview');
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>哈囉我是sleepyman，這是我一些作筆記的地方，歡迎參考或提出意見</p>
+              
+
+<p>c 的變數儲存類別有以下四種<br></p>
+
+<ul>
+<li>extern</li>
+<li>auto</li>
+<li>register</li>
+<li>static</li>
+<li>常數</li>
+</ul>
+
+<h2 id="extern">extern</h2>
+
+<p>extern 可以用在<strong>變數或函式</strong>上，用來告訴編輯器該函數或變數已在其他檔案宣告過，不用在配置記憶體。</p>
+
+<pre><code class="language-c">//file.c
+int a = 5;
+</code></pre>
+
+<pre><code class="language-c">//file2.c
+#include &lt;stdio.h&gt;
+#include &quot;file.c&quot;
+extern int a;
+int main()
+{
+	ptintf(&quot;%d\n&quot;,a);		//print 5
+	a = 6;
+	ptintf(&quot;%d\n&quot;,a);		//print 6
+}
+</code></pre>
+
+<h2 id="auto">auto</h2>
+
+<p>對於區域變數來說 auto 是預設的儲存類別</p>
+
+<pre><code class="language-c">#include &quot;stdio.h&quot;
+int main()
+{
+	int a = 5;
+	auto int b =3;
+	printf(&quot;%d\n&quot;, a+b);
+	return 0;
+}
+</code></pre>
+
+<p>a 跟 b的宣告是一樣的，auto 的生命週期是在{}裡</p>
+
+<h2 id="register">register</h2>
+
+<p>register 只能用在區域變數上，且只能定義整數或字元，主要是標記長期使用的變數，將他存入暫存器，使他可以快速存取</p>
+
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+int main()
+{
+	register int i,sum=0;
+	for (i=0; i &lt; 10; i++) {
+		sum+=i;
+	}
+	printf(&quot;%d\n&quot;,sum );
+	return 0;
+}
+</code></pre>
+
+<h2 id="static">static</h2>
+
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+int sum()
+{
+	static int a = 5;
+	auto int b = 5;
+	a++; b++;
+	return a+b;
+}
+int main()
+{
+	for(int i=0; i&lt;5; i++){
+		printf(&quot;%d\n&quot;, sum()); // 12 13 14 15 16
+	}
+	return 0;
+}
+</code></pre>
+
+<h2 id="常數">常數</h2>
+
+<p>常數會儲存在 text</p>
+
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+char *s = &quot;hello&quot;;
+int main()
+{
+	char *t = &quot;hello&quot;;
+	if (t==s) printf(&quot;%s\n&quot;,&quot;The addres is same&quot; );
+	else printf(&quot;%s\n&quot;,&quot;The addres is'n same&quot; );
+
+	return 0;
+}
+</code></pre>
+
+<h2 id="總結">總結</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">類型</th>
+<th>生命週期</th>
+<th align="left">儲存位置</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">auto variable</td>
+<td>{ } 裡</td>
+<td align="left">變數的預設儲存位置，位於 heap</td>
+</tr>
+
+<tr>
+<td align="left">extern function</td>
+<td>整個程式</td>
+<td align="left">變數的預設儲存位置，位於 text</td>
+</tr>
+
+<tr>
+<td align="left">extern variable</td>
+<td>整個程式</td>
+<td align="left">初始化在data，未初始化在BSS</td>
+</tr>
+
+<tr>
+<td align="left">static function</td>
+<td>當前檔案</td>
+<td align="left">text</td>
+</tr>
+
+<tr>
+<td align="left">static global variable</td>
+<td>當前檔案</td>
+<td align="left">初始化在data，未初始化在BSS</td>
+</tr>
+
+<tr>
+<td align="left">static local variable</td>
+<td>{ } 裡</td>
+<td align="left">初始化在data，未初始化在BSS</td>
+</tr>
+
+<tr>
+<td align="left">register variable</td>
+<td>{ } 裡</td>
+<td align="left">執行時儲存於 CPU 暫存器裡</td>
+</tr>
+
+<tr>
+<td align="left">字串常數</td>
+<td>當前檔案</td>
+<td align="left">text</td>
+</tr>
+</tbody>
+</table>
 
               
             </div>
@@ -287,7 +451,7 @@ ga('send', 'pageview');
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/post/thread%E7%B7%B4%E7%BF%92/" data-tooltip="Thread練習">
               
                   <span class="hide-xs hide-sm text-small icon-mr"></span>
                   <i class="fa fa-angle-right"></i>
@@ -305,19 +469,19 @@ ga('send', 'pageview');
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?=https://sleepyman212.github.io/about/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?=https://sleepyman212.github.io/post/c%E7%9A%84%E8%AE%8A%E6%95%B8%E5%84%B2%E5%AD%98%E9%A1%9E%E5%88%A5/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?tex=https://sleepyman212.github.io/about/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?tex=https://sleepyman212.github.io/post/c%E7%9A%84%E8%AE%8A%E6%95%B8%E5%84%B2%E5%AD%98%E9%A1%9E%E5%88%A5/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?ur=https://sleepyman212.github.io/about/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?ur=https://sleepyman212.github.io/post/c%E7%9A%84%E8%AE%8A%E6%95%B8%E5%84%B2%E5%AD%98%E9%A1%9E%E5%88%A5/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -369,6 +533,9 @@ s.setAttribute('data-timestamp', +new Date());
     &copy; 2018 <a href="https://github.com/SleepyMan212">SleepyMan212</a>. 
   </span>
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  
   &nbsp;&nbsp;
 
   &nbsp;
@@ -397,7 +564,7 @@ s.setAttribute('data-timestamp', +new Date());
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/post/thread%E7%B7%B4%E7%BF%92/" data-tooltip="Thread練習">
               
                   <span class="hide-xs hide-sm text-small icon-mr"></span>
                   <i class="fa fa-angle-right"></i>
@@ -415,19 +582,19 @@ s.setAttribute('data-timestamp', +new Date());
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?=https://sleepyman212.github.io/about/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?=https://sleepyman212.github.io/post/c%E7%9A%84%E8%AE%8A%E6%95%B8%E5%84%B2%E5%AD%98%E9%A1%9E%E5%88%A5/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?tex=https://sleepyman212.github.io/about/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?tex=https://sleepyman212.github.io/post/c%E7%9A%84%E8%AE%8A%E6%95%B8%E5%84%B2%E5%AD%98%E9%A1%9E%E5%88%A5/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?ur=https://sleepyman212.github.io/about/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?ur=https://sleepyman212.github.io/post/c%E7%9A%84%E8%AE%8A%E6%95%B8%E5%84%B2%E5%AD%98%E9%A1%9E%E5%88%A5/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -457,19 +624,19 @@ s.setAttribute('data-timestamp', +new Date());
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?=https%3A%2F%2Fsleepyman212.github.io%2Fabout%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?=https%3A%2F%2Fsleepyman212.github.io%2Fpost%2Fc%25E7%259A%2584%25E8%25AE%258A%25E6%2595%25B8%25E5%2584%25B2%25E5%25AD%2598%25E9%25A1%259E%25E5%2588%25A5%2F">
           <i class="fa fa-facebook-official"></i><span>%!(EXTRA string=Facebook)</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?tex=https%3A%2F%2Fsleepyman212.github.io%2Fabout%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?tex=https%3A%2F%2Fsleepyman212.github.io%2Fpost%2Fc%25E7%259A%2584%25E8%25AE%258A%25E6%2595%25B8%25E5%2584%25B2%25E5%25AD%2598%25E9%25A1%259E%25E5%2588%25A5%2F">
           <i class="fa fa-twitter"></i><span>%!(EXTRA string=Twitter)</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?ur=https%3A%2F%2Fsleepyman212.github.io%2Fabout%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?ur=https%3A%2F%2Fsleepyman212.github.io%2Fpost%2Fc%25E7%259A%2584%25E8%25AE%258A%25E6%2595%25B8%25E5%2584%25B2%25E5%25AD%2598%25E9%25A1%259E%25E5%2588%25A5%2F">
           <i class="fa fa-google-plus"></i><span>%!(EXTRA string=Google&#43;)</span>
         </a>
       </li>
@@ -646,9 +813,9 @@ s.setAttribute('data-timestamp', +new Date());
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/sleepyman212.github.io\/about\/';
+          this.page.url = 'https:\/\/sleepyman212.github.io\/post\/c%E7%9A%84%E8%AE%8A%E6%95%B8%E5%84%B2%E5%AD%98%E9%A1%9E%E5%88%A5\/';
           
-            this.page.identifier = '\/about\/'
+            this.page.identifier = '\/post\/c%E7%9A%84%E8%AE%8A%E6%95%B8%E5%84%B2%E5%AD%98%E9%A1%9E%E5%88%A5\/'
           
         };
         (function() {

@@ -3,6 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://sleepyman212.github.io/post/c%E7%9A%84%E8%AE%8A%E6%95%B8%E5%84%B2%E5%AD%98%E9%A1%9E%E5%88%A5/</loc>
+    <lastmod>2018-07-07T00:28:54+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://sleepyman212.github.io/about/</loc>
     <lastmod>2018-05-28T17:45:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -66,7 +73,7 @@
   
   <url>
     <loc>https://sleepyman212.github.io/</loc>
-    <lastmod>2018-05-28T17:45:30+08:00</lastmod>
+    <lastmod>2018-07-07T00:28:54+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -87,7 +94,7 @@
   
   <url>
     <loc>https://sleepyman212.github.io/post/</loc>
-    <lastmod>2018-05-28T02:58:03+08:00</lastmod>
+    <lastmod>2018-07-07T00:28:54+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
