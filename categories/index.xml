@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Coding Blog</title>
+    <title>Categories on 睡哥的睡眠學習法</title>
     <link>https://sleepyman212.github.io/categories/</link>
-    <description>Recent content in Categories on Coding Blog</description>
+    <description>Recent content in Categories on 睡哥的睡眠學習法</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Mon, 21 May 2018 14:15:52 +0800</lastBuildDate>
     
 	<atom:link href="https://sleepyman212.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Assignment</title>
-      <link>https://sleepyman212.github.io/categories/assignment/</link>
-      <pubDate>Mon, 21 May 2018 14:15:52 +0800</pubDate>
+      <title>Linux</title>
+      <link>https://sleepyman212.github.io/categories/linux/</link>
+      <pubDate>Sat, 07 Jul 2018 00:28:54 +0800</pubDate>
       
-      <guid>https://sleepyman212.github.io/categories/assignment/</guid>
+      <guid>https://sleepyman212.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>競程</title>
+      <link>https://sleepyman212.github.io/categories/%E7%AB%B6%E7%A8%8B/</link>
+      <pubDate>Fri, 03 Aug 2018 06:12:31 +0800</pubDate>
+      
+      <guid>https://sleepyman212.github.io/categories/%E7%AB%B6%E7%A8%8B/</guid>
       <description></description>
     </item>
     

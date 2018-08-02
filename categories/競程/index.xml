@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>競程 on 睡哥的睡眠學習法</title>
+    <link>https://sleepyman212.github.io/categories/%E7%AB%B6%E7%A8%8B/</link>
+    <description>Recent content in 競程 on 睡哥的睡眠學習法</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Fri, 03 Aug 2018 06:12:31 +0800</lastBuildDate>
+    
+	<atom:link href="https://sleepyman212.github.io/categories/%E7%AB%B6%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>UVa 12907 Pie</title>
+      <link>https://sleepyman212.github.io/post/uva_12097_pie/</link>
+      <pubDate>Fri, 03 Aug 2018 06:12:31 +0800</pubDate>
+      
+      <guid>https://sleepyman212.github.io/post/uva_12097_pie/</guid>
+      <description>題目網址 解題說明: 這一題是要找每個人可以分到的最大塊的派，且一塊派不能由不同的派組成的。所以我們可以使用二分搜來找出要的答案 範例code: #include</description>
+    </item>
+    
+    <item>
+      <title>NQueen</title>
+      <link>https://sleepyman212.github.io/post/nqueen/</link>
+      <pubDate>Mon, 21 May 2018 14:15:52 +0800</pubDate>
+      
+      <guid>https://sleepyman212.github.io/post/nqueen/</guid>
+      <description>八皇后 這是一題經典的回朔法的題目 題目 皇后的攻擊範圍是米字型，然後給定你一個N*N的棋盤，請問各個皇后不乎相打起來的方法有幾種。這一題算是小變</description>
+    </item>
+    
+  </channel>
+</rss>
