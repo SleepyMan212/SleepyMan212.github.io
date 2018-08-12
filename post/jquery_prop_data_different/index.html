@@ -20,7 +20,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.40.3 with theme Tranquilpeak 0.4.3-BETA">
-    <title>UVa1152 4 Values whose Sum is 0</title>
+    <title>Jquery prop and attr different</title>
     <meta name="author" content="kwei">
     <meta name="keywords" content=", Hugo, coding, js, engineer, 睡哥">
 
@@ -28,15 +28,15 @@
     
 
     
-    <meta name="description" content="題目網址 解題說明: 題目是要找出有幾 a &#43; b &#43; c &#43; d 為 0 的組合有幾個，可以先把 a 跟 b 相加的組合儲存在變數 ab 裡，然後對她 sort ， 之後再對 -c 跟 -d 的合的組">
-    <meta property="og:description" content="題目網址 解題說明: 題目是要找出有幾 a &#43; b &#43; c &#43; d 為 0 的組合有幾個，可以先把 a 跟 b 相加的組合儲存在變數 ab 裡，然後對她 sort ， 之後再對 -c 跟 -d 的合的組">
+    <meta name="description" content=".prop() V.S. attr.() prop 是作用在 DOM 元素上 ，而 attr 是作用在 html 文檔上，當我們去取得還未設定的屬性時(ex:checked)，用 attr() 時，會傳 undifined ，因為 attr() 只會回傳 string 的型態">
+    <meta property="og:description" content=".prop() V.S. attr.() prop 是作用在 DOM 元素上 ，而 attr 是作用在 html 文檔上，當我們去取得還未設定的屬性時(ex:checked)，用 attr() 時，會傳 undifined ，因為 attr() 只會回傳 string 的型態">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="UVa1152 4 Values whose Sum is 0">
-    <meta property="og:url" content="/post/uva1152_4_values_whose_sum_is_0/">
+    <meta property="og:title" content="Jquery prop and attr different">
+    <meta property="og:url" content="/post/jquery_prop_data_different/">
     <meta property="og:site_name" content="睡哥的睡眠學習法">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="睡哥的睡眠學習法">
-    <meta name="twitter:description" content="題目網址 解題說明: 題目是要找出有幾 a &#43; b &#43; c &#43; d 為 0 的組合有幾個，可以先把 a 跟 b 相加的組合儲存在變數 ab 裡，然後對她 sort ， 之後再對 -c 跟 -d 的合的組">
+    <meta name="twitter:description" content=".prop() V.S. attr.() prop 是作用在 DOM 元素上 ，而 attr 是作用在 html 文檔上，當我們去取得還未設定的屬性時(ex:checked)，用 attr() 時，會傳 undifined ，因為 attr() 只會回傳 string 的型態">
     
     
 
@@ -235,14 +235,14 @@ ga('send', 'pageview');
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      UVa1152 4 Values whose Sum is 0
+      Jquery prop and attr different
     </h1>
   
 
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-08-12T15:54:17&#43;08:00">
+      <time itemprop="datePublished" datetime="2018-08-12T16:25:59&#43;08:00">
         
    12, 2018
 
@@ -256,7 +256,7 @@ ga('send', 'pageview');
   
     <span></span>
     
-      <a class="category-link" href="/categories/%e7%ab%b6%e7%a8%8b">競程</a>
+      <a class="category-link" href="/categories/%e5%89%8d%e7%ab%af">前端</a>
     
   
 
@@ -278,48 +278,56 @@ ga('send', 'pageview');
             <div class="main-content-wrap">
               
 
-<p><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=3593">題目網址</a></p>
+<h2 id="prop-v-s-attr">.prop() V.S. attr.()</h2>
 
-<h2 id="解題說明">解題說明:</h2>
+<p>prop 是作用在 DOM 元素上 ，而 attr 是作用在 html 文檔上，當我們去取得還未設定的屬性時(ex:checked)，用 attr() 時，會傳 undifined ，因為 attr() 只會回傳 string 的型態的資料但是我們沒有設定 checked 這個屬性，而 prop() 則會回傳任何型態的資料，因此在選取未設定的屬性時用 prop()會比較好。
+</br>
+</br></p>
 
-<p>題目是要找出有幾 a + b + c + d 為 0 的組合有幾個，可以先把 a 跟 b 相加的組合儲存在變數 ab 裡，然後對她 sort ， 之後再對 -c 跟 -d 的合的組合一一列出，然後找出在變數 ab 裡的 upper_bound 跟 lower_bound，相減的合及為答案。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>attr</th>
+<th>prop</th>
+</tr>
+</thead>
 
-<h2 id="範例code">範例code:</h2>
+<tbody>
+<tr>
+<td>定義</td>
+<td>HTML的特性</td>
+<td>DOM元素的特性</td>
+</tr>
 
-<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
-using namespace std;
-const int INF = 40001;
-int main(int argc, char const *argv[]){
-    int nc;
-    int a[INF], b[INF], c[INF], d[INF], ab[16000000];
-    cin &gt;&gt; nc;
-    while (nc--){
-        int n;
-        cin &gt;&gt; n;
-        for (int i = 0; i &lt; n; i++)
-            cin &gt;&gt; a[i] &gt;&gt; b[i] &gt;&gt; c[i] &gt;&gt; d[i];
-        int t = 0;
-        for (int i = 0; i &lt; n; i++){
-            for (int j = 0; j &lt; n; j++){
-                // 紀錄 a 跟 b 所有的合
-                ab[t++] = a[i] + b[j];
-            }
-        }
-        int ans = 0;
-        sort(ab, ab + t);
-        for (int i = 0; i &lt; n; i++){
-            for (int j = 0; j &lt; n; j++){
-                ans += (upper_bound(ab, ab + t, -c[i] - d[j]) - lower_bound(ab, ab + t, -c[i] - d[j]));
-            }
-        }
-        cout &lt;&lt; ans &lt;&lt; endl;
-        if (nc)
-            cout &lt;&lt; endl;
-    }
-    return 0;
-}
+<tr>
+<td>回傳值</td>
+<td>字串</td>
+<td>任何值</td>
+</tr>
+</tbody>
+</table>
 
+<h2 id="例子">例子</h2>
+
+<pre><code class="language-html">&lt;input type='checkbox' id='test1' checked&gt;
+&lt;input type='checkbox' id='test2'&gt;
 </code></pre>
+
+<!-- <input id="cb" type="checkbox" checked>
+<input id="cb" type="checkbox" checked="checked"> -->
+
+<pre><code class="language-javascript">$('#test1').attr('checked') //print checked
+$('#test1').prop('checked') //print true
+$('#test2').attr('checked') //print undifined
+$('#test2').prop('checked') //print false
+</code></pre>
+
+<h2 id="參考資料">參考資料</h2>
+
+<p><a href="https://cythilya.github.io/2017/09/10/jquery-attr-vs-prop/">jQuery .attr() vs .prop()</a></p>
+
+<p><a href="https://github.com/JChehe/blog/blob/master/posts/jQuery%20%E7%9A%84%20attr%20%E4%B8%8E%20prop%20%E7%9A%84%E5%8C%BA%E5%88%AB.md">jQuery 的 attr 与 prop 的区别.</a></p>
 
               
             </div>
@@ -332,9 +340,7 @@ int main(int argc, char const *argv[]){
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small"></span><br/>
                     
-  <a class="tag tag--primary tag--small" href="/tags/binary-search/">binary search</a>
-
-  <a class="tag tag--primary tag--small" href="/tags/uva/">UVa</a>
+  <a class="tag tag--primary tag--small" href="/tags/jquery/">jquery</a>
 
 
                   </div>
@@ -348,7 +354,7 @@ int main(int argc, char const *argv[]){
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="/post/jquery_prop_data_different/" data-tooltip="Jquery prop and attr different">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml"></span>
@@ -356,7 +362,7 @@ int main(int argc, char const *argv[]){
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="/post/jquery_%E8%87%AA%E8%A8%82%E9%81%B8%E6%93%87%E5%99%A8/" data-tooltip="Jquery 自訂過濾器">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/post/uva1152_4_values_whose_sum_is_0/" data-tooltip="UVa1152 4 Values whose Sum is 0">
               
                   <span class="hide-xs hide-sm text-small icon-mr"></span>
                   <i class="fa fa-angle-right"></i>
@@ -374,19 +380,19 @@ int main(int argc, char const *argv[]){
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?=https://sleepyman212.github.io/post/uva1152_4_values_whose_sum_is_0/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?=https://sleepyman212.github.io/post/jquery_prop_data_different/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?tex=https://sleepyman212.github.io/post/uva1152_4_values_whose_sum_is_0/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?tex=https://sleepyman212.github.io/post/jquery_prop_data_different/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?ur=https://sleepyman212.github.io/post/uva1152_4_values_whose_sum_is_0/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?ur=https://sleepyman212.github.io/post/jquery_prop_data_different/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -461,7 +467,7 @@ s.setAttribute('data-timestamp', +new Date());
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="/post/jquery_prop_data_different/" data-tooltip="Jquery prop and attr different">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml"></span>
@@ -469,7 +475,7 @@ s.setAttribute('data-timestamp', +new Date());
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="/post/jquery_%E8%87%AA%E8%A8%82%E9%81%B8%E6%93%87%E5%99%A8/" data-tooltip="Jquery 自訂過濾器">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/post/uva1152_4_values_whose_sum_is_0/" data-tooltip="UVa1152 4 Values whose Sum is 0">
               
                   <span class="hide-xs hide-sm text-small icon-mr"></span>
                   <i class="fa fa-angle-right"></i>
@@ -487,19 +493,19 @@ s.setAttribute('data-timestamp', +new Date());
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?=https://sleepyman212.github.io/post/uva1152_4_values_whose_sum_is_0/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?=https://sleepyman212.github.io/post/jquery_prop_data_different/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?tex=https://sleepyman212.github.io/post/uva1152_4_values_whose_sum_is_0/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?tex=https://sleepyman212.github.io/post/jquery_prop_data_different/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?ur=https://sleepyman212.github.io/post/uva1152_4_values_whose_sum_is_0/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?ur=https://sleepyman212.github.io/post/jquery_prop_data_different/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -529,19 +535,19 @@ s.setAttribute('data-timestamp', +new Date());
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?=https%3A%2F%2Fsleepyman212.github.io%2Fpost%2Fuva1152_4_values_whose_sum_is_0%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?=https%3A%2F%2Fsleepyman212.github.io%2Fpost%2Fjquery_prop_data_different%2F">
           <i class="fa fa-facebook-official"></i><span>%!(EXTRA string=Facebook)</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?tex=https%3A%2F%2Fsleepyman212.github.io%2Fpost%2Fuva1152_4_values_whose_sum_is_0%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?tex=https%3A%2F%2Fsleepyman212.github.io%2Fpost%2Fjquery_prop_data_different%2F">
           <i class="fa fa-twitter"></i><span>%!(EXTRA string=Twitter)</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?ur=https%3A%2F%2Fsleepyman212.github.io%2Fpost%2Fuva1152_4_values_whose_sum_is_0%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?ur=https%3A%2F%2Fsleepyman212.github.io%2Fpost%2Fjquery_prop_data_different%2F">
           <i class="fa fa-google-plus"></i><span>%!(EXTRA string=Google&#43;)</span>
         </a>
       </li>
@@ -786,9 +792,9 @@ s.setAttribute('data-timestamp', +new Date());
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/sleepyman212.github.io\/post\/uva1152_4_values_whose_sum_is_0\/';
+          this.page.url = 'https:\/\/sleepyman212.github.io\/post\/jquery_prop_data_different\/';
           
-            this.page.identifier = '\/post\/uva1152_4_values_whose_sum_is_0\/'
+            this.page.identifier = '\/post\/jquery_prop_data_different\/'
           
         };
         (function() {

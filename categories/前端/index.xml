@@ -6,10 +6,19 @@
     <description>Recent content in 前端 on 睡哥的睡眠學習法</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Thu, 09 Aug 2018 05:46:59 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 12 Aug 2018 16:25:59 +0800</lastBuildDate>
     
 	<atom:link href="https://sleepyman212.github.io/categories/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Jquery prop and attr different</title>
+      <link>https://sleepyman212.github.io/post/jquery_prop_data_different/</link>
+      <pubDate>Sun, 12 Aug 2018 16:25:59 +0800</pubDate>
+      
+      <guid>https://sleepyman212.github.io/post/jquery_prop_data_different/</guid>
+      <description>.prop() V.S. attr.() prop 是作用在 DOM 元素上 ，而 attr 是作用在 html 文檔上，當我們去取得還未設定的屬性時(ex:checked)，用 attr() 時，會傳 undifined ，因為 attr() 只會回傳 string 的型態</description>
+    </item>
     
     <item>
       <title>Jquery 自訂過濾器</title>
