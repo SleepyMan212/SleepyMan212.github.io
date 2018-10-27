@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 睡哥的睡眠學習法</title>
+    <title>Posts on sleepycookie&#39;s blog</title>
     <link>https://sleepyman212.github.io/post/</link>
-    <description>Recent content in Posts on 睡哥的睡眠學習法</description>
+    <description>Recent content in Posts on sleepycookie&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-TW</language>
+    <language>zh-tw</language>
     <lastBuildDate>Thu, 16 Aug 2018 16:02:21 +0800</lastBuildDate>
     
 	<atom:link href="https://sleepyman212.github.io/post/index.xml" rel="self" type="application/rss+xml" />
@@ -17,7 +17,7 @@
       <pubDate>Thu, 16 Aug 2018 16:02:21 +0800</pubDate>
       
       <guid>https://sleepyman212.github.io/post/%E8%A3%BD%E4%BD%9C%E8%A9%95%E5%88%86%E6%98%9F%E6%98%9F%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
-      <description>製作評分星星的方法 最近剛好在想要如何做評分星星的效果，所以就來做一下了 成品 ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ .test{ height: 20%; } ul{ font-size: 0; direction: rtl; text-align: left; } li{ height: 20%; padding: 14px 0px; display: inline-block; width: 0.5em; overflow:</description>
+      <description>製作評分星星的方法 最近剛好在想要如何做評分星星的效果，所以就來做一下了 成品 ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ .test{ height: 20%; } .test ul{ font-size: 0; direction: rtl; text-align: left; } .test li{ height: 20%; padding: 14px 0px; display: inline-block; width:</description>
     </item>
     
     <item>

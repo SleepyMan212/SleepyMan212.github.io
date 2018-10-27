@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>C on 睡哥的睡眠學習法</title>
+    <title>C on sleepycookie&#39;s blog</title>
     <link>https://sleepyman212.github.io/tags/c/</link>
-    <description>Recent content in C on 睡哥的睡眠學習法</description>
+    <description>Recent content in C on sleepycookie&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-TW</language>
+    <language>zh-tw</language>
     <lastBuildDate>Sat, 07 Jul 2018 00:28:54 +0800</lastBuildDate>
     
 	<atom:link href="https://sleepyman212.github.io/tags/c/index.xml" rel="self" type="application/rss+xml" />
