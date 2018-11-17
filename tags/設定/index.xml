@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>設定 on sleepycookie&#39;s blog</title>
+    <link>https://sleepyman212.github.io/tags/%E8%A8%AD%E5%AE%9A/</link>
+    <description>Recent content in 設定 on sleepycookie&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Sat, 17 Nov 2018 23:07:12 +0800</lastBuildDate>
+    
+	<atom:link href="https://sleepyman212.github.io/tags/%E8%A8%AD%E5%AE%9A/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>與virtual box共用資料夾</title>
+      <link>https://sleepyman212.github.io/post/vboxsf/</link>
+      <pubDate>Sat, 17 Nov 2018 23:07:12 +0800</pubDate>
+      
+      <guid>https://sleepyman212.github.io/post/vboxsf/</guid>
+      <description>如何跟 Virtual Box 共用資料夾 step 1 先創建一個資料夾，名字隨便，這個是要拿來做共用的資料夾 step 2 開啟共用權限 右鍵資料夾點選內容 在點選第二個的共用 點選共用 新</description>
+    </item>
+    
+  </channel>
+</rss>

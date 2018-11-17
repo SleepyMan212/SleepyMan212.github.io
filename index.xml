@@ -6,10 +6,28 @@
     <description>Recent content on sleepycookie&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Thu, 16 Aug 2018 16:02:21 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 17 Nov 2018 23:41:12 +0800</lastBuildDate>
     
 	<atom:link href="https://sleepyman212.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Alias</title>
+      <link>https://sleepyman212.github.io/post/alias/</link>
+      <pubDate>Sat, 17 Nov 2018 23:41:12 +0800</pubDate>
+      
+      <guid>https://sleepyman212.github.io/post/alias/</guid>
+      <description>alias 可以用來自己定義指令，讓自己更方便 用法: alias 新指令的名稱=&amp;lsquo;指令名稱&amp;rsquo; 如果不想要每次登入都打一遍，可以在家目錄底下的</description>
+    </item>
+    
+    <item>
+      <title>與virtual box共用資料夾</title>
+      <link>https://sleepyman212.github.io/post/vboxsf/</link>
+      <pubDate>Sat, 17 Nov 2018 23:07:12 +0800</pubDate>
+      
+      <guid>https://sleepyman212.github.io/post/vboxsf/</guid>
+      <description>如何跟 Virtual Box 共用資料夾 step 1 先創建一個資料夾，名字隨便，這個是要拿來做共用的資料夾 step 2 開啟共用權限 右鍵資料夾點選內容 在點選第二個的共用 點選共用 新</description>
+    </item>
     
     <item>
       <title>製作評分星星的方法</title>
