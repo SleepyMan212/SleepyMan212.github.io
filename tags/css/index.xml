@@ -17,7 +17,7 @@
       <pubDate>Thu, 16 Aug 2018 16:02:21 +0800</pubDate>
       
       <guid>https://sleepyman212.github.io/post/%E8%A3%BD%E4%BD%9C%E8%A9%95%E5%88%86%E6%98%9F%E6%98%9F%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
-      <description>製作評分星星的方法 最近剛好在想要如何做評分星星的效果，所以就來做一下了 成品 ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ .test{ height: 20%; } .test ul{ font-size: 0; direction: rtl; text-align: left; } .test li{ height: 20%; padding: 14px 0px; display: inline-block; -webkit-width:</description>
+      <description>製作評分星星的方法 最近剛好在想要如何做評分星星的效果，所以就來做一下了 ps 如果有跑版把 .text li 裡的 width 條一下應該就可以了 成品 ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ .test{ height:</description>
     </item>
     
   </channel>
