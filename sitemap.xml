@@ -3,6 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://sleepyman212.github.io/post/accessibility1/</loc>
+    <lastmod>2018-12-15T20:32:24+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://sleepyman212.github.io/post/alias/</loc>
     <lastmod>2018-11-17T23:41:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -170,7 +177,7 @@
   
   <url>
     <loc>https://sleepyman212.github.io/post/</loc>
-    <lastmod>2018-11-17T23:41:12+08:00</lastmod>
+    <lastmod>2018-12-15T20:32:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -205,7 +212,7 @@
   
   <url>
     <loc>https://sleepyman212.github.io/</loc>
-    <lastmod>2018-11-17T23:41:12+08:00</lastmod>
+    <lastmod>2018-12-15T20:32:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
