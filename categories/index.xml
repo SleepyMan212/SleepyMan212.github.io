@@ -6,9 +6,19 @@
     <description>Recent content in Categories on sleepycookie&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
+    <lastBuildDate>Sat, 15 Dec 2018 20:32:24 +0800</lastBuildDate>
     
 	<atom:link href="https://sleepyman212.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Accessibility</title>
+      <link>https://sleepyman212.github.io/categories/accessibility/</link>
+      <pubDate>Sat, 15 Dec 2018 20:32:24 +0800</pubDate>
+      
+      <guid>https://sleepyman212.github.io/categories/accessibility/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Linux</title>
@@ -31,7 +41,7 @@
     <item>
       <title>前端</title>
       <link>https://sleepyman212.github.io/categories/%E5%89%8D%E7%AB%AF/</link>
-      <pubDate>Thu, 16 Aug 2018 16:02:21 +0800</pubDate>
+      <pubDate>Mon, 07 Jan 2019 04:38:38 +0800</pubDate>
       
       <guid>https://sleepyman212.github.io/categories/%E5%89%8D%E7%AB%AF/</guid>
       <description></description>

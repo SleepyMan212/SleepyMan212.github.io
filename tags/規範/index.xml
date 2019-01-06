@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>規範 on sleepycookie&#39;s blog</title>
+    <link>https://sleepyman212.github.io/tags/%E8%A6%8F%E7%AF%84/</link>
+    <description>Recent content in 規範 on sleepycookie&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Sat, 15 Dec 2018 20:32:24 +0800</lastBuildDate>
+    
+	<atom:link href="https://sleepyman212.github.io/tags/%E8%A6%8F%E7%AF%84/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>無障礙網頁規範</title>
+      <link>https://sleepyman212.github.io/post/accessibility1/</link>
+      <pubDate>Sat, 15 Dec 2018 20:32:24 +0800</pubDate>
+      
+      <guid>https://sleepyman212.github.io/post/accessibility1/</guid>
+      <description>以下是網站無障礙規範 2.0 的內容 我把 AA 級的規範盡量拿出來，如果要達到 AAA 級，仍需到網站無障礙規範 2.0參考 1. (替代文字)為任何非文字的內容提供相等</description>
+    </item>
+    
+  </channel>
+</rss>
