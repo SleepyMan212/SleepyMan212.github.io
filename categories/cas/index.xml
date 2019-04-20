@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cas on sleepycookie&#39;s blog</title>
+    <link>https://sleepyman212.github.io/categories/cas/</link>
+    <description>Recent content in Cas on sleepycookie&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Sun, 21 Apr 2019 02:33:02 +0800</lastBuildDate>
+    
+	<atom:link href="https://sleepyman212.github.io/categories/cas/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>建立 CAS server</title>
+      <link>https://sleepyman212.github.io/post/cas_build/</link>
+      <pubDate>Sun, 21 Apr 2019 02:33:02 +0800</pubDate>
+      
+      <guid>https://sleepyman212.github.io/post/cas_build/</guid>
+      <description>環境要求 jdk-11 apache-maven-3.5.2 apache-tomcat-9.0.17 install openjdk sudo add-apt-repository ppa:openjdk-r/ppa sudo apt update sudo apt install openjdk-11-jdk java -version #看一下版本跟有無安裝成功 install tomcat Create Tomcat User sudo groupadd tomcat #創建一個 tomcat 群組 sudo useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat #創建一個較 tomcat 的使用者</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Moddle on sleepycookie&#39;s blog</title>
+    <link>https://sleepyman212.github.io/categories/moddle/</link>
+    <description>Recent content in Moddle on sleepycookie&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Sun, 21 Apr 2019 02:38:03 +0800</lastBuildDate>
+    
+	<atom:link href="https://sleepyman212.github.io/categories/moddle/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>建立 moodle 工作環境</title>
+      <link>https://sleepyman212.github.io/post/moodle_build/</link>
+      <pubDate>Sun, 21 Apr 2019 02:38:03 +0800</pubDate>
+      
+      <guid>https://sleepyman212.github.io/post/moodle_build/</guid>
+      <description>環境要求 os ubuntu 18.04.1 apache mysql php moodle 3.x 安裝教學 用來建立 server 用的 apache 更新套件 sudo apt update 安裝apache sudo apt install apache2 讓 apache 可以通過防火牆之前，先看一下 sudo ufw app list 現在讓 apache 可以通</description>
+    </item>
+    
+  </channel>
+</rss>

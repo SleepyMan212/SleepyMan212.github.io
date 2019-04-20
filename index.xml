@@ -6,10 +6,46 @@
     <description>Recent content on sleepycookie&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Mon, 07 Jan 2019 04:38:38 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 21 Apr 2019 02:38:03 +0800</lastBuildDate>
     
 	<atom:link href="https://sleepyman212.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>建立 moodle 工作環境</title>
+      <link>https://sleepyman212.github.io/post/moodle_build/</link>
+      <pubDate>Sun, 21 Apr 2019 02:38:03 +0800</pubDate>
+      
+      <guid>https://sleepyman212.github.io/post/moodle_build/</guid>
+      <description>環境要求 os ubuntu 18.04.1 apache mysql php moodle 3.x 安裝教學 用來建立 server 用的 apache 更新套件 sudo apt update 安裝apache sudo apt install apache2 讓 apache 可以通過防火牆之前，先看一下 sudo ufw app list 現在讓 apache 可以通</description>
+    </item>
+    
+    <item>
+      <title>建立 CAS server</title>
+      <link>https://sleepyman212.github.io/post/cas_build/</link>
+      <pubDate>Sun, 21 Apr 2019 02:33:02 +0800</pubDate>
+      
+      <guid>https://sleepyman212.github.io/post/cas_build/</guid>
+      <description>環境要求 jdk-11 apache-maven-3.5.2 apache-tomcat-9.0.17 install openjdk sudo add-apt-repository ppa:openjdk-r/ppa sudo apt update sudo apt install openjdk-11-jdk java -version #看一下版本跟有無安裝成功 install tomcat Create Tomcat User sudo groupadd tomcat #創建一個 tomcat 群組 sudo useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat #創建一個較 tomcat 的使用者</description>
+    </item>
+    
+    <item>
+      <title>PHP session 換頁找不到了</title>
+      <link>https://sleepyman212.github.io/post/php_session/</link>
+      <pubDate>Mon, 11 Mar 2019 02:33:27 +0800</pubDate>
+      
+      <guid>https://sleepyman212.github.io/post/php_session/</guid>
+      <description>&lt;p&gt;最近重新架 PHP 的環境，在使用 session 的時候發現了問題，當我在這個網頁設定了 session 後，
+當我跳轉到另一個網頁後，發現 session 不見了!!!!&lt;/p&gt;
+
+&lt;p&gt;我確認了一下我有沒有開啟 session(&lt;code&gt;session_start()&lt;/code&gt;) ， 也確認了我是在同一個網域底下&lt;/p&gt;
+
+&lt;p&gt;於是我上網找了一下解答，發現是 &lt;code&gt;session.auto_start&lt;/code&gt; 需要開啟，可以在 &lt;code&gt;php_info()&lt;/code&gt; 中找找看，如下圖，如果確認沒有開後，可以到 php.ini 裡去改掉他&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;session.auto_start=1&lt;/code&gt; 這樣應該就可以了&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/oNpf7vl.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Box Model</title>
