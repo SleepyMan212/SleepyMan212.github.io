@@ -20,9 +20,9 @@
       <description>&lt;p&gt;最近重新架 PHP 的環境，在使用 session 的時候發現了問題，當我在這個網頁設定了 session 後，
 當我跳轉到另一個網頁後，發現 session 不見了!!!!&lt;/p&gt;
 
-&lt;p&gt;我確認了一下我有沒有開啟 session(&lt;code&gt;session_start()&lt;/code&gt;) ， 也確認了我是在同一個網域底下&lt;/p&gt;
+&lt;p&gt;我確認了一下我有沒有開啟 session(&lt;code&gt;session_start()&lt;/code&gt;) ， 也確認了我是在同一個網域底下，結果是我在其中一個關鍵的 php 檔案沒有開啟&amp;hellip;&lt;/p&gt;
 
-&lt;p&gt;於是我上網找了一下解答，發現是 &lt;code&gt;session.auto_start&lt;/code&gt; 需要開啟，可以在 &lt;code&gt;php_info()&lt;/code&gt; 中找找看，如下圖，如果確認沒有開後，可以到 php.ini 裡去改掉他&lt;/p&gt;
+&lt;p&gt;於是我上網找了一下有沒有可以避免的方法，發現是 &lt;code&gt;session.auto_start&lt;/code&gt; ，它可以自動幫我們開啟 session ，這樣就不會有時忘了開了，可以在 &lt;code&gt;php_info()&lt;/code&gt; 中找找看，如下圖，如果確認沒有開後，可以到 php.ini 裡去改掉他&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;session.auto_start=1&lt;/code&gt; 這樣應該就可以了&lt;/p&gt;
 
