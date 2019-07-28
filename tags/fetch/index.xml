@@ -17,7 +17,40 @@
       <pubDate>Sun, 28 Jul 2019 22:45:06 +0800</pubDate>
       
       <guid>https://sleepyman212.github.io/post/fetch_post/</guid>
-      <description>&lt;p&gt;最近剛好在使用 fetch 代替 ajax ，剛好遇到了一些小問題，所以寫下來提醒一下自己&lt;/p&gt;</description>
+      <description>&lt;p&gt;最近剛好在使用 fetch 代替 ajax ，剛好遇到了一些小問題，所以寫下來提醒一下自己&lt;/p&gt;
+
+&lt;p&gt;fetch 是一個新的 API 可以讓我們可以去做 AJAX ，而且用起來更直觀&lt;/p&gt;
+
+&lt;p&gt;當要使用 fetch 來做 POST 我們可以用以下的寫法:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;fetch(URL,{
+    method:&#39;POST&#39;,
+    method: &#39;cors&#39;  // 用來作為 跨域請求用的
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;這樣就可以使用 fetch 發出 POST 的請求，當我們要附上資料時，可以用 FormData 這一個 class 來帶上我們的資料&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;const fd = new FormData([可以直接指定 dom 元素是 form 的])&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;const fd = FormData();
+fd.append(&#39;key&#39;,value);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;可以用以上兩種方法來給 FormData 資料&lt;/p&gt;
+
+&lt;p&gt;最後只需要把 FormData 帶入 fetch 中的欄位，就可以成功帶上資料了&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;fetch(URL,{
+    method:&#39;POST&#39;,
+    method: &#39;cors&#39;,  // 用來作為 跨域請求用的
+    body: fd
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;這邊不需要去指定 Content-Type ，因為 fetch 會幫我們帶上適當的屬性&lt;/p&gt;
+&lt;/blockquote&gt;</description>
     </item>
     
   </channel>

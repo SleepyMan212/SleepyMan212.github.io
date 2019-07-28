@@ -555,7 +555,40 @@ s.setAttribute('data-timestamp', +new Date());
                   Jul 7, 2019
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><p>最近剛好在使用 fetch 代替 ajax ，剛好遇到了一些小問題，所以寫下來提醒一下自己</p></div>
+              <div class="media-content hide-xs font-merryweather"><p>最近剛好在使用 fetch 代替 ajax ，剛好遇到了一些小問題，所以寫下來提醒一下自己</p>
+
+<p>fetch 是一個新的 API 可以讓我們可以去做 AJAX ，而且用起來更直觀</p>
+
+<p>當要使用 fetch 來做 POST 我們可以用以下的寫法:</p>
+
+<pre><code class="language-javascript">fetch(URL,{
+    method:'POST',
+    method: 'cors'  // 用來作為 跨域請求用的
+})
+</code></pre>
+
+<p>這樣就可以使用 fetch 發出 POST 的請求，當我們要附上資料時，可以用 FormData 這一個 class 來帶上我們的資料</p>
+
+<p><code>const fd = new FormData([可以直接指定 dom 元素是 form 的])</code></p>
+
+<pre><code class="language-javascript">const fd = FormData();
+fd.append('key',value);
+</code></pre>
+
+<p>可以用以上兩種方法來給 FormData 資料</p>
+
+<p>最後只需要把 FormData 帶入 fetch 中的欄位，就可以成功帶上資料了</p>
+
+<pre><code class="language-javascript">fetch(URL,{
+    method:'POST',
+    method: 'cors',  // 用來作為 跨域請求用的
+    body: fd
+})
+</code></pre>
+
+<blockquote>
+<p>這邊不需要去指定 Content-Type ，因為 fetch 會幫我們帶上適當的屬性</p>
+</blockquote></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
