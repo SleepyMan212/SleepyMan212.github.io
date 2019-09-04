@@ -30,7 +30,6 @@
 
 &lt;p&gt;&lt;style&gt;
 .bg1{
-background: url(&amp;ldquo;&lt;a href=&#34;https://i.imgur.com/Tbu2vFT.png&amp;quot;&#34;&gt;https://i.imgur.com/Tbu2vFT.png&amp;quot;&lt;/a&gt;);
 width: 700px;
 height: 500px;
 background-position:center;
@@ -46,7 +45,7 @@ justify-content:center;
 align-items:center;
 }
 &lt;/style&gt;
-&lt;div class=&#39;bg1&#39;&gt;
+&lt;div class=&#39;bg1&#39; style=&#34;background: url(&#39;/images/alphaBG.png&#39;);&#34;&gt;
     &lt;div class=&#39;bg1-txt&#39;&gt;
         Test
     &lt;/div&gt;
@@ -54,7 +53,7 @@ align-items:center;
 
 &lt;pre&gt;&lt;code class=&#34;language-htmlmixed=&#34;&gt;&amp;lt;style&amp;gt;
 .bg{
-background: url(&amp;quot;https://i.imgur.com/Tbu2vFT.png&amp;quot;);
+background: url(&amp;quot;/images/alphaBG.png&amp;quot;);
 width: 800px;
 height:600px;
 background-position:center;
@@ -85,7 +84,6 @@ align-items:center;
 
 &lt;p&gt;&lt;style&gt;
 .bg{
-background: url(&amp;ldquo;&lt;a href=&#34;https://i.imgur.com/Tbu2vFT.png&amp;quot;&#34;&gt;https://i.imgur.com/Tbu2vFT.png&amp;quot;&lt;/a&gt;);
 width: 700px;
 height:500px;
 background-position:center;
@@ -101,7 +99,7 @@ justify-content:center;
 align-items:center;
 }
 &lt;/style&gt;
-&lt;div class=&#39;bg&#39;&gt;
+&lt;div class=&#39;bg&#39; style=&#34;background: url(&#39;/images/alphaBG.png&#39;);&#34;&gt;
     &lt;div class=&#39;bg-txt&#39;&gt;
         Test
     &lt;/div&gt;
@@ -109,7 +107,7 @@ align-items:center;
 
 &lt;pre&gt;&lt;code class=&#34;language-htmlmixed=&#34;&gt;&amp;lt;style&amp;gt;
 .bg{
-background: url(&amp;quot;https://i.imgur.com/Tbu2vFT.png&amp;quot;);
+background: url(&amp;quot;/images/alphaBG.png&amp;quot;);
 width: 800px;
 height:600px;
 background-position:center;
