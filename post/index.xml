@@ -6,10 +6,141 @@
     <description>Recent content in Posts on sleepycookie&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sun, 28 Jul 2019 22:45:06 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 05 Sep 2019 01:26:04 +0800</lastBuildDate>
     
 	<atom:link href="https://sleepyman212.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AlphaVSOpacity</title>
+      <link>https://sleepyman212.github.io/post/alphavsopacity/</link>
+      <pubDate>Thu, 05 Sep 2019 01:26:04 +0800</pubDate>
+      
+      <guid>https://sleepyman212.github.io/post/alphavsopacity/</guid>
+      <description>&lt;h1 id=&#34;opacity-跟-background-差別&#34;&gt;opacity 跟 background 差別&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;opacity 子元素都會受影響，也會變成透明&lt;/li&gt;
+&lt;li&gt;background-color 子元素就不會影響&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;example&#34;&gt;example&lt;/h2&gt;
+
+&lt;h3 id=&#34;opacity&#34;&gt;opacity&lt;/h3&gt;
+
+&lt;p&gt;&lt;style&gt;
+.bg1{
+background: url(&amp;ldquo;&lt;a href=&#34;https://i.imgur.com/Tbu2vFT.png&amp;quot;&#34;&gt;https://i.imgur.com/Tbu2vFT.png&amp;quot;&lt;/a&gt;);
+width: 700px;
+height: 500px;
+background-position:center;
+color:black;
+font-size:8rem;
+opacity:.6;
+}
+.bg1-txt{
+width:100%;
+height:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+&lt;/style&gt;
+&lt;div class=&#39;bg1&#39;&gt;
+    &lt;div class=&#39;bg1-txt&#39;&gt;
+        Test
+    &lt;/div&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-htmlmixed=&#34;&gt;&amp;lt;style&amp;gt;
+.bg{
+background: url(&amp;quot;https://i.imgur.com/Tbu2vFT.png&amp;quot;);
+width: 800px;
+height:600px;
+background-position:center;
+color:black;
+font-size:8rem;
+opacity:.6;
+}
+.bg-txt{
+width:100%;
+height:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+&amp;lt;/style&amp;gt;
+&amp;lt;div class=&#39;bg&#39;&amp;gt;
+    &amp;lt;div class=&#39;bg-txt&#39;&amp;gt;
+        Test
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;上面的範例連文字都會有透明&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;backgroud&#34;&gt;backgroud&lt;/h3&gt;
+
+&lt;p&gt;&lt;style&gt;
+.bg{
+background: url(&amp;ldquo;&lt;a href=&#34;https://i.imgur.com/Tbu2vFT.png&amp;quot;&#34;&gt;https://i.imgur.com/Tbu2vFT.png&amp;quot;&lt;/a&gt;);
+width: 700px;
+height:500px;
+background-position:center;
+color:black;
+font-size:8rem;
+}
+.bg-txt{
+width:100%;
+height:100%;
+background: rgba(255,255,255,.3);
+display:flex;
+justify-content:center;
+align-items:center;
+}
+&lt;/style&gt;
+&lt;div class=&#39;bg&#39;&gt;
+    &lt;div class=&#39;bg-txt&#39;&gt;
+        Test
+    &lt;/div&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-htmlmixed=&#34;&gt;&amp;lt;style&amp;gt;
+.bg{
+background: url(&amp;quot;https://i.imgur.com/Tbu2vFT.png&amp;quot;);
+width: 800px;
+height:600px;
+background-position:center;
+color:black;
+font-size:8rem;
+}
+.bg-txt{
+width:100%;
+height:100%;
+background: rgba(255,255,255,.3);
+display:flex;
+justify-content:center;
+align-items:center;
+}
+&amp;lt;/style&amp;gt;
+&amp;lt;div class=&#39;bg&#39;&amp;gt;
+    &amp;lt;div class=&#39;bg-txt&#39;&amp;gt;
+        Test
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;文字不會透明了，只有背竟有透明一點&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;參考資料&#34;&gt;參考資料&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=yxAGnwgzM4E&#34;&gt;CSS Opacity VS Alpha | Opacity 跟 Alpha的差異 | 調整透明度&lt;/a&gt;
+&lt;a href=&#34;https://kknews.cc/zh-tw/tech/va6zgml.html&#34;&gt;CSS實現背景圖片透明，文字不透明效果&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Fetch POST 傳遞資料</title>
